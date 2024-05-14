@@ -1,0 +1,22 @@
+So you did some steganography cracking, huh? Nice job.
+
+The next and final part of this puzzle relies on some understanding of simple
+multilayer perceptron behaviors. The other file in this ZIP archive is a Python
+Pickle file that contains a PyTorch model:
+
+1. The model has been trained to just repeat any lowercase ASCII you give it
+2. Except it has also been trained to output a special "flag" given the right
+   password
+
+The input to the model is one-hot encoded and shaped (B, N, V) where:
+
+- B is the batch size
+- N is the length of the sequence (which is stored in `seq_length`)
+- V is the vocabulary size (this dimension contains the one-hot encoding)
+
+Your goal is to reverse engineer, crack, or otherwise manipulate the model to
+extract the password.
+
+Once you complete the puzzle, either find Ziyad at the BSidesSF Anthropic
+booth, or reach out to ziyad@anthropic.com with "BSides Challenge Solved!"
+in the subject of your email to claim your prize.
